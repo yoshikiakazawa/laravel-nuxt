@@ -3,7 +3,6 @@ version: "3.8"
 services:
   nginx:
     image: nginx:1.21.1
-    container_name: nginx
     ports:
       - "80:80"
     volumes:
@@ -18,7 +17,6 @@ services:
     build:
       context: ./docker/php
       dockerfile: Dockerfile
-    container_name: php
     user: "1000:1000"
     volumes:
       - ./backend:/var/www
@@ -34,7 +32,6 @@ services:
 
   mysql:
     image: mysql:8.0.36
-    container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel_db
@@ -51,7 +48,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
@@ -66,7 +62,6 @@ services:
 
   frontend:
     build: ./frontend
-    container_name: nuxt-app
     ports:
       - "3000:3000"
     volumes:
