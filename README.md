@@ -1,1 +1,2 @@
 # laravel-nuxt
+# laravel-nuxt
