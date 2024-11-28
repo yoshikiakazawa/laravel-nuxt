@@ -84,6 +84,10 @@ php artisan db:seed
 php artisan key:generate
 ```
 
+```bash
+exit
+```
+
 **frontend Nuxt.js 環境構築**
 
 ```bash
@@ -112,4 +116,4 @@ yarn dev
 ## URL
 
 - 開発環境：http://localhost/
-- phpMyAdmin：http://localhost:8080/# laravel-nuxt
+- phpMyAdmin：http://localhost:8080/
